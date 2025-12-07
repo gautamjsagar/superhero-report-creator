@@ -1,5 +1,6 @@
 import { Badge } from "./Badge";
 import { ActionWord } from "./ActionWord";
+import { PageFooter } from "./PageFooter";
 
 interface AchievementsPageProps {
   questionsConquered: number;
@@ -119,9 +120,12 @@ export const AchievementsPage = ({
       </div>
 
       {/* Bottom decoration */}
-      <div className="absolute bottom-4 right-4">
+      <div className="absolute bottom-16 right-4">
         <ActionWord word="EPIC" variant="zap" size="sm" />
       </div>
+
+      {/* Footer */}
+      <PageFooter pageNumber={3} totalPages={3} />
     </div>
   );
 };

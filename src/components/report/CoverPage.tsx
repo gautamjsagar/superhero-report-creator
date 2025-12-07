@@ -1,6 +1,7 @@
 import { Starburst } from "./Starburst";
 import { StarRating } from "./StarRating";
 import { ActionWord } from "./ActionWord";
+import { PageFooter } from "./PageFooter";
 
 interface CoverPageProps {
   userName: string;
@@ -83,9 +84,12 @@ export const CoverPage = ({
       </div>
 
       {/* Bottom decoration */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2">
         <ActionWord word="HERO" variant="bam" size="sm" />
       </div>
+
+      {/* Footer */}
+      <PageFooter pageNumber={1} totalPages={3} />
     </div>
   );
 };
