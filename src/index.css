@@ -2,95 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Poppins:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
+    /* Superhero Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Electric Blue - Primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sunshine Yellow - Secondary */
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 220 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Hero Red - Accent */
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Grass Green - Success */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Purple Power */
+    --purple: 271 81% 56%;
+    --purple-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --radius: 0.5rem;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 0.75rem;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Comic Book Shadows */
+    --shadow-comic: 4px 4px 0px hsl(220 20% 15%);
+    --shadow-comic-lg: 6px 6px 0px hsl(220 20% 15%);
+    --shadow-glow-blue: 0 0 20px hsl(217 91% 60% / 0.5);
+    --shadow-glow-yellow: 0 0 20px hsl(43 96% 56% / 0.5);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 220 20% 15%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --purple: 271 81% 56%;
+    --purple-foreground: 0 0% 100%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 9% 65%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -100,6 +86,151 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, .font-comic {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.05em;
+  }
+
+  .font-bungee {
+    font-family: 'Bungee', cursive;
+  }
+}
+
+@layer components {
+  /* A4 Page Container */
+  .page-a4 {
+    @apply relative bg-card overflow-hidden;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm 15mm;
+    box-sizing: border-box;
+  }
+
+  /* Comic Book Card */
+  .comic-card {
+    @apply relative rounded-lg border-4 border-foreground bg-card p-4;
+    box-shadow: var(--shadow-comic);
+  }
+
+  /* Speech Bubble */
+  .speech-bubble {
+    @apply relative bg-card rounded-2xl border-3 border-foreground p-4;
+    box-shadow: var(--shadow-comic);
+  }
+
+  .speech-bubble::after {
+    content: '';
+    @apply absolute -bottom-3 left-8 w-6 h-6 bg-card border-b-3 border-r-3 border-foreground;
+    transform: rotate(45deg);
+  }
+
+  /* Starburst */
+  .starburst {
+    @apply relative inline-flex items-center justify-center;
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(43 96% 65%) 100%);
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+  }
+
+  /* Halftone Pattern */
+  .halftone {
+    background-image: radial-gradient(circle, hsl(var(--foreground) / 0.1) 1px, transparent 1px);
+    background-size: 8px 8px;
+  }
+
+  .halftone-dense {
+    background-image: radial-gradient(circle, hsl(var(--foreground) / 0.15) 1.5px, transparent 1.5px);
+    background-size: 6px 6px;
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply relative h-6 rounded-full overflow-hidden border-3 border-foreground;
+    background: hsl(var(--muted));
+    box-shadow: inset 0 2px 4px hsl(0 0% 0% / 0.1);
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(217 91% 70%) 100%);
+  }
+
+  /* Badge Circle */
+  .badge-circle {
+    @apply flex flex-col items-center justify-center rounded-full border-4 border-foreground text-center;
+    box-shadow: var(--shadow-comic);
+  }
+
+  /* Action Text Effects */
+  .pow-text {
+    @apply font-comic text-accent transform -rotate-6;
+    text-shadow: 3px 3px 0 hsl(var(--secondary)), 6px 6px 0 hsl(var(--foreground));
+  }
+
+  /* Polka Dot Pattern */
+  .polka-dots {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.1) 10%, transparent 10%);
+    background-size: 20px 20px;
+  }
+
+  /* Comic Border */
+  .comic-border {
+    @apply border-4 border-foreground;
+    box-shadow: var(--shadow-comic);
+  }
+
+  .comic-border-lg {
+    @apply border-[5px] border-foreground;
+    box-shadow: var(--shadow-comic-lg);
+  }
+
+  /* Glow Effects */
+  .glow-blue {
+    box-shadow: var(--shadow-glow-blue);
+  }
+
+  .glow-yellow {
+    box-shadow: var(--shadow-glow-yellow);
+  }
+}
+
+@layer utilities {
+  .text-shadow-comic {
+    text-shadow: 2px 2px 0 hsl(var(--foreground));
+  }
+
+  .text-shadow-white {
+    text-shadow: 2px 2px 0 hsl(0 0% 100%);
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px hsl(var(--secondary)));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(var(--secondary)));
+    }
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
   }
 }
