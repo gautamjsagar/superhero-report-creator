@@ -2,6 +2,7 @@ import { Badge } from "./Badge";
 import { PowerCard } from "./PowerCard";
 import { RadarChart } from "./RadarChart";
 import { ActionWord } from "./ActionWord";
+import { PageFooter } from "./PageFooter";
 
 interface SuperpowersPageProps {
   brainPower: number;
@@ -76,6 +77,9 @@ export const SuperpowersPage = ({
           <RadarChart data={radarData} size={200} />
         </div>
       </div>
+
+      {/* Footer */}
+      <PageFooter pageNumber={2} totalPages={3} />
     </div>
   );
 };

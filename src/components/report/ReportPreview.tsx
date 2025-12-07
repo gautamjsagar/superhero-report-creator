@@ -3,6 +3,7 @@ import { CoverPage } from "./CoverPage";
 import { SuperpowersPage } from "./SuperpowersPage";
 import { AchievementsPage } from "./AchievementsPage";
 import { cn } from "@/lib/utils";
+import collegixLogo from "@/assets/collegix-logo.png";
 
 export const ReportPreview = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -46,13 +47,16 @@ export const ReportPreview = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-8">
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Header with logo */}
         <div className="text-center mb-8">
-          <h1 className="font-comic text-5xl text-foreground mb-2">
-            🦸 SUPERHERO DISCOVERY REPORT 🦸
-          </h1>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img src={collegixLogo} alt="Collegix.io" className="h-16 w-16 object-contain" />
+            <h1 className="font-comic text-5xl text-foreground">
+              SUPERHERO DISCOVERY REPORT
+            </h1>
+          </div>
           <p className="font-body text-muted-foreground text-lg">
-            Age 10-13 • Comic Book Style • A4 Format
+            Age 10-13 • Comic Book Style
           </p>
         </div>
 
@@ -110,20 +114,6 @@ export const ReportPreview = () => {
           >
             NEXT →
           </button>
-        </div>
-
-        {/* Specs info */}
-        <div className="mt-12 max-w-2xl mx-auto">
-          <div className="comic-card bg-card/90">
-            <h3 className="font-comic text-xl mb-4 text-foreground">📋 SPECIFICATIONS</h3>
-            <ul className="font-body text-sm space-y-2 text-muted-foreground">
-              <li>• <strong>Format:</strong> A4 (210mm × 297mm)</li>
-              <li>• <strong>Resolution:</strong> 300 DPI for print quality</li>
-              <li>• <strong>Margins:</strong> 20mm top/bottom, 15mm left/right</li>
-              <li>• <strong>Fonts:</strong> Bangers (headers), Poppins (body)</li>
-              <li>• <strong>Color Palette:</strong> Electric Blue, Sunshine Yellow, Hero Red</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
